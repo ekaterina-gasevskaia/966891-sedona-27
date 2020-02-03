@@ -8,7 +8,7 @@
 <header>
   <nav>
     <a href="#">
-      <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип">
+      <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип города Седона">
     </a>
     <ul>
       <li><a href="#">Информация</a></li>
@@ -20,6 +20,7 @@
 </header>
 <main>
   <section>
+    <h2 class="visually-hidden">Ваши пожелания</h2>
     <form action="" method="get" oninput="cost1.value=cost.value">
       <fieldset>
         <legend>Инфраструктура:</legend>
@@ -40,11 +41,11 @@
         <label for="apartments">Апартаменты</label>
       </fieldset>
       <div>
-        <span>Стоимость в сутки (Р):</span><br>
-        <label for="cost">
+        <label>
+          <span>Стоимость в сутки (Р):</span><br>
           <output name="cost1"></output>
+          <input name="cost" max="4000" min="0" step="100" type="range" id="cost">
         </label>
-        <input name="cost" max="4000" min="0" step="100" type="range" id="cost">
       </div>
       <button type="submit">Показать</button>
     </form>
@@ -63,7 +64,7 @@
     <button type="button"><img src="img/icon-down-dir.svg" width="11" height="10" alt="листать вниз"></button>
   </section>
   <section>
-    <h2>Список возможного жилья</h2>
+    <h2 class="visually-hidden">Список возможного жилья</h2>
     <ul>
       <li>
         <a href="#"><img src="img/hotel-picture.jpg" width="135" height="90" alt="Фото гостиницы"></a>
