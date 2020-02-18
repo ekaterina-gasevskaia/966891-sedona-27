@@ -32,6 +32,10 @@ a {
   color: #bdbbbc;
 }
 
+.active-link a {
+  color: #766357;
+}
+
 .button {
   font-family: inherit;
   font-weight: bold;
