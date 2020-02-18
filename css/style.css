@@ -14,7 +14,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #766357;
 }
 
 .link {
@@ -30,6 +29,11 @@ a {
 
 .link:active {
   color: #bdbbbc;
+}
+
+.active-link {
+  font-weight: bold;
+  color: #766357;
 }
 
 .button {
