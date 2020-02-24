@@ -2,19 +2,18 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
   color: #333333;
   text-transform: uppercase;
 
-  background-color: white;
+  background-color: #81b3d2;
 }
 
 a {
   text-decoration: none;
-  color: #766357;
 }
 
 .link {
@@ -59,7 +58,7 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.brown-button {
+.button-brown {
   font-family: inherit;
   font-weight: bold;
   line-height: 21px;
@@ -72,17 +71,17 @@ a {
   border: none;
 }
 
-.brown-button:hover,
-.brown-button:focus {
+.button-brown:hover,
+.button-brown:focus {
   background-color: #604e43;
 }
 
-.brown-button:active {
+.button-brown:active {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
 }
 
-.main-navigation {
+.navigation {
   background-color: white;
 }
 
@@ -97,13 +96,13 @@ a {
   background-repeat: no-repeat;
 }
 
-.img-greeting{
+.greeting-img{
   background-image: url("../img/intro-mask.svg");
   background-position: bottom;
   background-repeat: no-repeat;
 }
 
-.text-greeting {
+.greeting-text {
   margin-left: auto;
   margin-right: auto;
   background-color: white;
@@ -170,15 +169,13 @@ a {
   border: 2px solid #e5e5e5;
 }
 
-.main-footer {
+.footer {
   background-color: white;
 }
 
 .footer-social ul {
   list-style: none;
 }
-
-
 
 
 /*style for catalog.html*/
@@ -239,56 +236,3 @@ a {
 .housing-list {
   list-style: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
