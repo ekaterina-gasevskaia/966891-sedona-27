@@ -9,7 +9,7 @@ body {
   color: #333333;
   text-transform: uppercase;
 
-  background-color: #81b3d2;
+  background-color: #ffffff;
 }
 
 a {
@@ -40,8 +40,8 @@ a {
   font-weight: bold;
   line-height: 21px;
   text-align: center;
-  color: #ffffff;
   vertical-align: middle;
+  color: #ffffff;
   text-transform: uppercase;
 
   background-color: #81b3d2;
@@ -63,8 +63,8 @@ a {
   font-weight: bold;
   line-height: 21px;
   text-align: center;
-  color: #ffffff;
   vertical-align: middle;
+  color: #ffffff;
   text-transform: uppercase;
 
   background-color: #766357;
@@ -77,8 +77,25 @@ a {
 }
 
 .button-brown:active {
-  background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .navigation {
@@ -97,6 +114,8 @@ a {
 }
 
 .greeting-img{
+  margin-bottom: -19px;
+  
   background-image: url("../img/intro-mask.svg");
   background-position: bottom;
   background-repeat: no-repeat;
@@ -105,6 +124,7 @@ a {
 .greeting-text {
   margin-left: auto;
   margin-right: auto;
+
   background-color: white;
 }
 
@@ -124,6 +144,7 @@ a {
 
 .benefits-blue {
   color: white;
+
   background-color: #81b3d2;
 }
 
@@ -134,11 +155,13 @@ a {
 .benefits-img {
   width: 800px;
   height: 256px;
+
   overflow: hidden;
 }
 
 .appointment {
   min-height: 300px;
+
   background-color: white;
   background-image: url("../img/map.png");
 }
@@ -170,7 +193,7 @@ a {
 }
 
 .footer {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .footer-social ul {
@@ -203,14 +226,16 @@ a {
 }
 
 .sort-item button {
+  padding: 0;
+
   font-family: inherit;
   font-size: 12px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
+
+  background-color: transparent;
   border: none;
   border-bottom: 1px dotted #81b3d2;
-  padding: 0;
-  background-color: transparent;
 }
 
 .sort-item button:hover,
@@ -220,13 +245,15 @@ a {
 
 .sort-item button:active {
   color: black;
+
   border: none;
 }
 
 .control {
-  border: none;
   padding: 0;
+
   background-color: transparent;
+  border: none;
 }
 
 .housing {
