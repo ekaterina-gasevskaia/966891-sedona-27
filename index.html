@@ -36,7 +36,7 @@
       <div class="greeting-text">
         <h1>Седона — небольшой городок в Аризоне,<br>
           заслуживающий большего!</h1>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон! </p>
       </div>
     </section>
 
@@ -146,48 +146,55 @@
     </section>
   </main>
 
-
-  <footer class="footer">
-    <p>
-      #visitSEDONA<br>
-      Тел: +7(495) 666-02-66
-    </p>
-    <div class="footer-social">
-      <b class="visually-hidden">Наши социальные сети</b>
-      <ul class="socials">
-        <li><a class="button" href="#"><img alt="Твиттер" height="15" src="img/twitter.svg" width="17"></a></li>
-        <li><a class="button" href="#"><img alt="Фейсбук" height="22" src="img/fb-icon.svg" width="12"></a></li>
-        <li><a class="button" href="#"><img alt="Ютуб" height="16" src="img/youtube.svg" width="20"></a></li>
-      </ul>
-    </div>
-    <div class="footer-copyright">
-      <a href="https://htmlacademy.ru">
-        <p>Website by</p>
-        <img alt="Логоип академии" height="41" src="img/logo-htmlacademy.svg" width="115">
-      </a>
+  <footer class="footer-main">
+    <div class="footer-container">
+      <p class="footer-contacts">
+        #visitSEDONA<br>
+        Тел: +7(495) 666-02-66
+      </p>
+      <div class="footer-social">
+        <b class="visually-hidden">Наши социальные сети</b>
+        <ul>
+          <li><a class="button" href="#"><img alt="Твиттер" height="15" src="img/twitter.svg" width="17"></a></li>
+          <li><a class="button" href="#"><img alt="Фейсбук" height="22" src="img/fb-icon.svg" width="12"></a></li>
+          <li><a class="button" href="#"><img alt="Ютуб" height="16" src="img/youtube.svg" width="20"></a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        <a href="https://htmlacademy.ru">
+          <p>Website by</p>
+          <img alt="Логоип академии" height="41" src="img/logo-htmlacademy.svg" width="115">
+        </a>
+      </div>
     </div>
   </footer>
 
 
   <section class="popup ">
-    <form action="" method="get">
-      <p class="popup-item">
+    <form class="popup-form" action="" method="get">
+      <p class="popup-data">
         <label for="checkin">Дата заезда:</label>
-        <input id="checkin" name="checkin" placeholder="24 апреля 2017" type="date">
+        <input id="checkin" name="checkin" placeholder="24 апреля 2017" type="text">
       </p>
-      <p class="popup-item">
+      <p class="popup-data">
         <label for="checkout">Дата выезда:</label>
-        <input id="checkout" name="checkout" placeholder="4 июля 2017" type="date">
+        <input id="checkout" name="checkout" placeholder="4 июля 2017" type="text">
       </p>
-      <p class="popup-item">
-        <label for="adult">Взрослые:</label>
-        <input id="adult" type="number">
-      </p>
-      <p class="popup-item">
-        <label for="children">Дети:</label>
-        <input id="children" type="number">
-      </p>
-      <button class="button" type="submit">Найти</button>
+      <div class="popup-container">
+        <p class="popup-person">
+          <label for="adult">Взрослые:</label>
+          <button class="button-left" type="button"></button>
+          <input id="adult" type="text">
+          <button class="button-right" type="button"></button>
+        </p>
+        <p class="popup-person">
+          <label for="children">Дети:</label>
+          <button type="button"></button>
+          <input id="children" type="text">
+          <button type="button"></button>
+        </p>
+      </div>
+      <button class="button popup-button" type="submit">Найти</button>
     </form>
   </section>
 </div>
