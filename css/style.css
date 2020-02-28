@@ -13,16 +13,18 @@ body {
 }
 
 .content {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
 
-  background-color: white;
+  background-color: #545bff;
   box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
 
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .link {
@@ -113,7 +115,8 @@ a {
 .navigation-site {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin-top: -80px;
+  margin-bottom: -10px;
   padding: 0;
 
   list-style: none;
@@ -122,13 +125,18 @@ a {
 .navigation-site a {
   display: block;
   padding: 20px 70px;
-  margin-top: -10px;
-  margin-bottom: -50px;
+}
+
+.navigation-site li:nth-of-type(2) {
+  margin-right: auto;
+}
+
+.navigation-site li:nth-of-type(3) {
+  margin-left: auto;
 }
 
 .navigation-logo {
   position: relative;
-  top: -10px;
 }
 
 .greeting {
@@ -137,14 +145,14 @@ a {
   background-color: #81b3d2;
 }
 
-.greeting-img{
+.greeting-img {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 508px;
 
   background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
-  background-position: 0 452px , 0 -85px;
+  background-position: 0 452px, 0 -85px;
   background-repeat: no-repeat, no-repeat;
   background-color: #9abad2;
 }
@@ -179,8 +187,7 @@ a {
 }
 
 .advices-item {
-  flex-grow: 1;
-  min-width: 400px;
+  width: 400px;
   min-height: 330px;
 
   background-color: white;
@@ -203,8 +210,7 @@ a {
 }
 
 .benefits-item {
-  flex-grow: 1;
-  min-width: 400px;
+  width: 400px;
   min-height: 256px;
 
   background-color: #eeeeee;
@@ -223,8 +229,7 @@ a {
 
 div[class^="benefits-img"] {
   width: 800px;
-  min-height: 256px;
-  margin: auto;
+  background-size: cover;
 
   overflow: hidden;
   background-color: #81b3d2;
@@ -243,13 +248,12 @@ div[class^="benefits-img"] {
 }
 
 .appointment {
-  min-height: 760px;
+  position: relative;
+
+  min-height: 291px;
   margin: 0;
 
   background-color: white;
-  background-image: url("../img/map.png");
-  background-repeat: no-repeat;
-  background-position: 0 290px;
 }
 
 .appointment-info {
@@ -285,64 +289,10 @@ div[class^="benefits-img"] {
   line-height: 26px;
 }
 
-.footer-main {
-  min-height: 120px;
-
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-}
-
-.footer-contacts {
-  margin-left: 130px;
-
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
-  text-align: left;
-}
-
-
-.footer-social ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 150px;
-  margin-left: -100px;
-
-  list-style: none;
-}
-
-.footer-social .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 48px;
-  width: 46px;
-}
-
-.footer-copyright {
-  margin-right: 100px;
-}
-
-.footer-copyright a {
-  display: flex;
-  align-items: center;
-}
-
-.footer-copyright p {
-  margin-right: 10px;
-}
-
 /*Style for popup*/
 .popup {
-  position: relative;
-  bottom: 590px;
+  position: absolute;
+  top: 290px;
   left: 316px;
   box-sizing: border-box;
   width: 568px;
@@ -364,20 +314,46 @@ div[class^="benefits-img"] {
   padding: 40px 55px 55px;
 }
 
-.popup-data input{
+.popup-data input {
   box-sizing: border-box;
   width: 346px;
   height: 38px;
   padding-left: 13px;
-
-
-  background-image: url("../img/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: 315px 6px;
 }
 
 .popup-data label {
   margin-right: 10px;
+}
+
+.calendar-checkin,
+.calendar-checkout {
+  position: absolute;
+  right: 65px;
+}
+
+.calendar-checkin {
+  top: 62px;
+}
+
+.calendar-checkout {
+  top: 127px;
+}
+
+.calendar-checkin path,
+.calendar-checkout path {
+  fill: #cacaca;
+}
+
+.calendar-checkin:hover path,
+.calendar-checkin:focus path,
+.calendar-checkout:hover path,
+.calendar-checkout:focus path {
+  fill: #231f20;
+}
+
+.calendar-checkin:active path,
+.calendar-checkout:active path {
+  fill: #81b3d2;
 }
 
 .popup-container {
@@ -402,10 +378,64 @@ div[class^="benefits-img"] {
 }
 
 .popup-person button {
+  position: relative;
+
   width: 38px;
   height: 38px;
 
   border: none;
+}
+
+.button-left::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 14px;
+
+  width: 12px;
+  height: 3px;
+
+  background-color: #bdbbbc;
+}
+
+.button-right::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 14px;
+
+  width: 11px;
+  height: 3px;
+
+  background-color: #bdbbbc;
+}
+
+.button-right::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 14px;
+
+  width: 11px;
+  height: 3px;
+  transform: rotate(90deg);
+
+  background-color: #bdbbbc;
+}
+
+.button-left:hover::before,
+.button-left:focus::before,
+.button-right:hover::before,
+.button-right:focus::before,
+.button-right:hover::after,
+.button-right:focus::after {
+  background-color: #231f20;
+}
+
+.button-left:active::before,
+.button-right:active::before,
+.button-right:active::after {
+  background-color: #81b3d2;
 }
 
 .popup-person label {
@@ -437,27 +467,147 @@ div[class^="benefits-img"] {
   border: 2px solid #e5e5e5;
 }
 
+.appointment-map {
+  min-height: 593px;
+  margin: 0;
+
+  background-color: #8effbf;
+  background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.footer-absolute {
+  position: absolute;
+  bottom: 0;
+
+  width: 1200px;
+
+  opacity: 0.9;
+}
+
+.footer-main {
+  min-height: 120px;
+
+  background-color: white;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.footer-contacts {
+  margin-left: 130px;
+
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: left;
+}
+
+.footer-social {
+  width: 200px;
+  margin: auto;
+}
+
+.footer-social ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.button-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 46px;
+}
+
+.button-social:active path {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.footer-copyright {
+  margin-right: 85px;
+}
+
+.footer-copyright a {
+  display: flex;
+  align-items: center;
+}
+
+.footer-copyright p {
+  margin-right: -5px;
+}
+
+.footer-copyright:hover path,
+.footer-copyright:focus path {
+  fill: #81b3d2;
+}
+
+.footer-copyright:active path {
+  fill: #bdbbbc;
+}
+
 /*style for catalog.html*/
 .features {
+  min-height: 217px;
+
+  color: white;
+
   background-color: #81b3d2;
   background-image: url("../img/filter-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
+}
 
-  color: white;
+.features form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .sort {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 86px;
+  padding: 0 70px;
+
   background-color: white;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.sort-container {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: auto;
+}
+
+.sort-list {
+  display: flex;
+
+  list-style: none;
+}
+
+.sort-item {
+  width: 80px;
+  text-align: right;
 }
 
 .sort p {
   font-size: 12px;
   line-height: 18px;
-}
-
-.sort-list {
-  list-style: none;
 }
 
 .sort-item button {
@@ -492,9 +642,23 @@ div[class^="benefits-img"] {
 }
 
 .housing {
+  min-height: 453px;
+
   background-color: white;
 }
 
 .housing-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
   list-style: none;
+}
+
+.housing-item {
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  border-bottom: 1px solid #f2f2f2;
 }
