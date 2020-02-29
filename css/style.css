@@ -17,7 +17,7 @@ body {
   width: 1200px;
   margin: 0 auto;
 
-  background-color: #545bff;
+  background-color: white;
   box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
 
 }
@@ -110,13 +110,13 @@ a {
 
 .navigation {
   background-color: white;
+  margin: 0;
 }
 
 .navigation-site {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -80px;
-  margin-bottom: -10px;
+  margin: 0;
   padding: 0;
 
   list-style: none;
@@ -124,7 +124,10 @@ a {
 
 .navigation-site a {
   display: block;
-  padding: 20px 70px;
+  box-sizing: border-box;
+  width: 239px;
+  min-height: 56px;
+  padding-top: 10px;
 }
 
 .navigation-site li:nth-of-type(2) {
@@ -136,7 +139,10 @@ a {
 }
 
 .navigation-logo {
-  position: relative;
+  position: absolute;
+  left: 50%;
+
+  margin-left: -70px;
 }
 
 .greeting {
@@ -577,11 +583,7 @@ div[class^="benefits-img"] {
 }
 
 .sort {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   min-height: 86px;
-  padding: 0 70px;
 
   background-color: white;
   border-bottom: 1px solid #f2f2f2;
@@ -589,34 +591,47 @@ div[class^="benefits-img"] {
 
 .sort-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-left: 50px;
-  margin-right: auto;
+  box-sizing: border-box;
+  width: 1044px;
+  margin: auto;
+}
+
+.sort h3 {
+  margin-right: 30px;
+
+  font-size: 21px;
+  line-height: 26px;
 }
 
 .sort-list {
   display: flex;
+  align-items: center;
+  margin-right: auto;
+
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sort-list ul{
+  display: flex;
+  padding: 0;
 
   list-style: none;
 }
 
 .sort-item {
-  width: 80px;
-  text-align: right;
-}
-
-.sort p {
-  font-size: 12px;
-  line-height: 18px;
+  width: 90px;
+  text-align: left;
 }
 
 .sort-item button {
   padding: 0;
 
-  font-family: inherit;
-  font-size: 12px;
-  line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
+  font: inherit;
+  text-transform: uppercase;
 
   background-color: transparent;
   border: none;
@@ -636,9 +651,19 @@ div[class^="benefits-img"] {
 
 .control {
   padding: 0;
+  margin-left: 5px;
 
   background-color: transparent;
   border: none;
+}
+
+.control:hover path,
+.control:focus path {
+  fill: #231f20;
+}
+
+.control:active path {
+  fill: #81b3d2;
 }
 
 .housing {
@@ -651,14 +676,11 @@ div[class^="benefits-img"] {
   display: flex;
   flex-direction: column;
   margin: 0;
+  padding: 0;
 
   list-style: none;
 }
 
 .housing-item {
-  display: flex;
-  align-items: center;
-  margin: 0;
-
   border-bottom: 1px solid #f2f2f2;
 }
