@@ -638,6 +638,36 @@ div[class^="benefits-img"] {
   background: rgba(255, 255, 255, 0.3);
 }
 
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: white;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
 .features {
   min-height: 217px;
 
