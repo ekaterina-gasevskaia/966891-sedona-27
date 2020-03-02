@@ -92,7 +92,8 @@ a {
   background-color: #503e33;
 }
 
-.visually-hidden {
+.visually-hidden,
+input[type="checkbox"]{
   position: absolute;
 
   width: 1px;
@@ -172,8 +173,11 @@ a {
 }
 
 .greeting-text h1 {
-  padding-bottom: 35px;
+  padding-bottom: 30px;
   margin: 0;
+
+  font-size: 21px;
+  line-height: 26px;
 }
 
 .greeting-text p {
@@ -562,8 +566,37 @@ div[class^="benefits-img"] {
 }
 
 /*style for catalog.html*/
+.filters {
+  min-height: 217px;
+
+  color: white;
+
+  background-color: #81b3d2;
+  background-image: url("../img/filter-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.filters-container {
+  box-sizing: border-box;
+  width: 1060px;
+  margin: auto;
+}
+
+.filters form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.filter {
+  border: none;
+}
+
+
 .filter-range {
   width: 330px;
+  margin-top: 30px;
 }
 
 .filter-range-title {
@@ -572,6 +605,7 @@ div[class^="benefits-img"] {
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
+  text-align: left;
 }
 
 .price-controls {
@@ -612,7 +646,7 @@ div[class^="benefits-img"] {
 .price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
-  padding-left: 65px;
+  padding-left: 50px;
 }
 
 .price-controls input {
@@ -660,34 +694,37 @@ div[class^="benefits-img"] {
   cursor: pointer;
 }
 
-.range-toggle-min {
-  left: 0;
+.range-toggle:hover {
+  background: #1c4f80;
 }
 
 .range-toggle-max {
   left: 80%;
 }
 
-.features {
-  min-height: 217px;
+.button-transparent {
+  padding: 6px 35px;
 
-  color: white;
+  line-height: 20px;
+  color: inherit;
+  text-transform: uppercase;
 
-  background-color: #81b3d2;
-  background-image: url("../img/filter-background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
-.features form {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.button-transparent:hover,
+.button-transparent:focus {
+  color: black;
+
+  background-color: white;
 }
 
 .sort {
-  min-height: 86px;
   box-sizing: border-box;
+  min-height: 86px;
   padding-top: 10px;
 
   background-color: white;
@@ -696,7 +733,6 @@ div[class^="benefits-img"] {
 
 .sort-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   width: 1060px;
@@ -720,14 +756,13 @@ div[class^="benefits-img"] {
 }
 
 .sort-list p {
-  width: 110px;
+  width: 70px;
 
   text-align: left;
 }
 
 .sort-list ul{
   display: flex;
-  padding: 0;
 
   list-style: none;
 }
@@ -792,8 +827,8 @@ div[class^="benefits-img"] {
 }
 
 .housing-item {
-  min-height: 150px;
   box-sizing: border-box;
+  min-height: 150px;
   padding-top: 30px;
 
   border-bottom: 1px solid #f2f2f2;
@@ -846,14 +881,13 @@ div[class^="benefits-img"] {
 }
 
 .housing-item-rating {
-  height: 90px;
   text-align: right
 }
 
 .housing-item-rating p {
   display: block;
   width: 110px;
-  height: 27px;
+  min-height: 27px;
   margin-top: 40px;
   margin-bottom: 0;
 
