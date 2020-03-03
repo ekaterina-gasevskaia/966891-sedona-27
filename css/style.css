@@ -17,7 +17,7 @@ body {
   width: 1200px;
   margin: 0 auto;
 
-  background-color: #6175ff;
+  background-color: white;
   box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
 
 }
@@ -114,6 +114,13 @@ input[type="checkbox"]{
   margin: 0;
 }
 
+.navigation-logo {
+  position: absolute;
+  left: 50%;
+
+  margin-left: -70px;
+}
+
 .navigation-site {
   display: flex;
   flex-wrap: wrap;
@@ -128,7 +135,7 @@ input[type="checkbox"]{
   box-sizing: border-box;
   width: 239px;
   min-height: 56px;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .navigation-site li:nth-of-type(2) {
@@ -137,13 +144,6 @@ input[type="checkbox"]{
 
 .navigation-site li:nth-of-type(3) {
   margin-left: auto;
-}
-
-.navigation-logo {
-  position: absolute;
-  left: 50%;
-
-  margin-left: -70px;
 }
 
 .greeting {
@@ -224,8 +224,37 @@ input[type="checkbox"]{
 }
 
 .benefits-text {
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 30px;
+}
+
+.benefits-text p:first-of-type {
+  display: block;
+  position: relative;
+  margin-top: 23px;
+  margin-bottom: 20px;
+}
+
+.benefits-text p:first-of-type:before,
+.benefits-text p:first-of-type:after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 175px;
+
+  height: 1px;
+  width: 8px;
+
+  background-color: #333333;
+}
+
+.benefits-text p:first-of-type:after {
+  left: 217px;
+}
+
+.benefits-blue .benefits-text p:first-of-type:before,
+.benefits-blue .benefits-text p:first-of-type:after {
+  background-color: white;
 }
 
 .benefits-blue {
@@ -567,7 +596,9 @@ div[class^="benefits-img"] {
 
 /*style for catalog.html*/
 .filters {
+  box-sizing: border-box;
   min-height: 217px;
+  padding-top: 25px;
 
   color: white;
 
@@ -583,20 +614,78 @@ div[class^="benefits-img"] {
   margin: auto;
 }
 
-.filters form {
+.filters-form {
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 
+.filters-form .filter:nth-of-type(2) {
+  margin-left: 120px;
+  margin-right: auto;
+}
+
 .filter {
+  margin: 0;
+  padding: 0;
+
+  text-align: left;
+
   border: none;
 }
 
+.filter legend {
+  margin-bottom: 25px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter ul {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.filter-item {
+  margin-bottom: 25px;
+  padding-left: 40px;
+}
+
+.filter-item label {
+  position: relative;
+}
+
+.filter-input + label:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -38px;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+.filter-input:checked + label:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -38px;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+}
 
 .filter-range {
   width: 330px;
-  margin-top: 30px;
+  margin-top: -20px;
 }
 
 .filter-range-title {
@@ -614,8 +703,6 @@ div[class^="benefits-img"] {
   height: 36px;
   margin-bottom: 20px;
 
-  font-size: 0;
-
   border: 2px solid white;
   border-radius: 2px;
 }
@@ -629,14 +716,13 @@ div[class^="benefits-img"] {
   width: 2px;
   height: 22px;
 
-  background: white;
+  background-color: white;
   transform: translate(-50%, -50%);
 }
 
 .price-controls label {
   display: inline-block;
 
-  font-size: 14px;
   line-height: 38px;
   vertical-align: top;
 
@@ -656,7 +742,7 @@ div[class^="benefits-img"] {
   color: inherit;
   font: inherit;
 
-  background: none;
+  background-color: transparent;
   border: none;
 }
 
@@ -669,14 +755,14 @@ div[class^="benefits-img"] {
 .range-controls .scale {
   height: 2px;
 
-  background: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
   width: 80%;
   height: 2px;
 
-  background: white;
+  background-color: white;
 }
 
 .range-toggle {
@@ -686,7 +772,7 @@ div[class^="benefits-img"] {
   width: 4px;
   height: 4px;
 
-  background: #ababab;
+  background-color: #ababab;
   border: 8px solid white;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
@@ -695,7 +781,7 @@ div[class^="benefits-img"] {
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+  background-color: #1c4f80;
 }
 
 .range-toggle-max {
@@ -709,7 +795,7 @@ div[class^="benefits-img"] {
   color: inherit;
   text-transform: uppercase;
 
-  background: transparent;
+  background-color: transparent;
   border: 2px solid white;
   border-radius: 2px;
   cursor: pointer;
@@ -884,6 +970,10 @@ div[class^="benefits-img"] {
   text-align: right
 }
 
+.housing-item-rating img {
+  margin-left: 3px;
+}
+
 .housing-item-rating p {
   display: block;
   width: 110px;
@@ -896,8 +986,3 @@ div[class^="benefits-img"] {
 
   background-color: #f2f2f2;
 }
-
-.housing-item-rating img {
-  margin-left: 3px;
-}
-
