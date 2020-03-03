@@ -532,11 +532,17 @@ div[class^="benefits-img"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  width: 1060px;
+  padding-top: 20px;
+  margin: auto;
 }
 
 .footer-contacts {
-  margin-left: 130px;
+  width: 320px;
+}
+
+.footer-contacts p {
+  margin: 0 0 10px 50px;
 
   font-weight: bold;
   font-size: 21px;
@@ -545,7 +551,7 @@ div[class^="benefits-img"] {
 }
 
 .footer-social {
-  width: 200px;
+  width: 320px;
   margin: auto;
 }
 
@@ -554,7 +560,7 @@ div[class^="benefits-img"] {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 150px;
-  margin: 0;
+  margin: auto;
   padding: 0;
 
   list-style: none;
@@ -573,16 +579,13 @@ div[class^="benefits-img"] {
 }
 
 .footer-copyright {
-  margin-right: 85px;
+  width: 320px;
 }
 
 .footer-copyright a {
   display: flex;
   align-items: center;
-}
-
-.footer-copyright p {
-  margin-right: -5px;
+  margin-left: 90px;
 }
 
 .footer-copyright:hover path,
