@@ -355,6 +355,7 @@ div[class^="benefits-img"] {
   width: 346px;
   height: 38px;
   padding-left: 13px;
+  padding-right: 30px;
 }
 
 .popup-data label {
@@ -411,6 +412,8 @@ div[class^="benefits-img"] {
   box-sizing: border-box;
   width: 38px;
   height: 38px;
+
+  text-align: center;
 }
 
 .popup-person button {
