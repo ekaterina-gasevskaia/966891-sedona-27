@@ -34,7 +34,7 @@
       </div>
     </section>
     <section class="benefits">
-      <div class="benefits-blue benefits-item">
+      <div class="benefits-item">
         <div class="benefits-text">
           <h2>Настоящий<br>
             городок</h2>
@@ -76,7 +76,7 @@
     </section>
     <section class="benefits">
       <div class="benefits-img-bridge"></div>
-      <div class="benefits-item benefits-blue">
+      <div class="benefits-item">
         <div class="benefits-text">
           <h2>Там есть<br>
             Мост дьявола</h2>
@@ -86,34 +86,37 @@
         </div>
       </div>
     </section>
-    <section class="benefits">
-      <div class="benefits-item">
-        <div class="benefits-text">
-          <h2>Небольшая<br>
-            площадь</h2>
-          <p>№3</p>
-          <p>Все достопримечательности<br>
-            находятся очень близко</p>
-        </div>
-      </div>
-      <div class="benefits-item">
-        <div class="benefits-text">
-          <h2>Красивая<br>
-            дорога</h2>
-          <p>№4</p>
-          <p>Ехать в Седону из Лас-Вегаса совсем<br>
-            не скучно!</p>
-        </div>
-      </div>
-      <div class="benefits-item">
-        <div class="benefits-text">
-          <h2>Мало<br>
-            туристов</h2>
-          <p>№5</p>
-          <p>Большинство едет в гранд каньон<br>
-            и толпится там</p>
-        </div>
-      </div>
+    <section>
+      <h2 class="visually-hidden">Преимущества</h2>
+      <ul class="benefits-list">
+        <li class="benefits-item">
+          <div class="benefits-text">
+            <h2>Небольшая<br>
+              площадь</h2>
+            <p>№3</p>
+            <p>Все достопримечательности<br>
+              находятся очень близко</p>
+          </div>
+        </li>
+        <li class="benefits-item">
+          <div class="benefits-text">
+            <h2>Красивая<br>
+              дорога</h2>
+            <p>№4</p>
+            <p>Ехать в Седону из Лас-Вегаса совсем<br>
+              не скучно!</p>
+          </div>
+        </li>
+        <li class="benefits-item">
+          <div class="benefits-text">
+            <h2>Мало<br>
+              туристов</h2>
+            <p>№5</p>
+            <p>Большинство едет в гранд каньон<br>
+              и толпится там</p>
+          </div>
+        </li>
+      </ul>
     </section>
     <section class="appointment">
       <div class="appointment-info">
@@ -126,7 +129,7 @@
         </div>
         <button class="button-brown" type="submit">ПОИСК ГОСТИНИЦЫ В седоне</button>
         <div class="popup">
-          <form class="popup-form" action="" method="get">
+          <form class="popup-form" action="#" method="get">
             <p class="popup-data">
               <label for="checkin">Дата заезда:</label>
               <input id="checkin" name="checkin" placeholder="24 апреля 2017" type="text">
@@ -175,13 +178,13 @@
               <p class="popup-person">
                 <label for="adult">Взрослые:</label>
                 <button class="button-left" type="button"></button>
-                <input id="adult" type="text">
+                <input id="adult" type="number">
                 <button class="button-right" type="button"></button>
               </p>
               <p class="popup-person">
                 <label for="children">Дети:</label>
                 <button class="button-left" type="button"></button>
-                <input id="children" type="text">
+                <input id="children" type="number">
                 <button class="button-right" type="button"></button>
               </p>
             </div>
@@ -189,14 +192,16 @@
           </form>
         </div>
       </div>
-      <div class="appointment-map"></div>
+      <div class="appointment-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13093.979653035196!2d-111.76484064094437!3d34.86891656851479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2ses!4v1583692133490!5m2!1sru!2ses" width="100%" height="593" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
     </section>
   </main>
   <footer class="footer-main footer-absolute">
     <div class="footer-container">
       <div class="footer-contacts">
         <p>#visitSEDONA</p>
-        <p>Тел: +7(495) 666-02-66</p>
+        <a href="tel:7(495) 666-02-66">Тел: +7(495) 666-02-66</a>
       </div>
       <div class="footer-social">
         <b class="visually-hidden">Наши социальные сети</b>
@@ -239,5 +244,6 @@
     </div>
   </footer>
 </div>
+<script src="js/script.js"></script>
 </body>
 </html>

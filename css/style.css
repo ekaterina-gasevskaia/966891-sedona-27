@@ -57,6 +57,8 @@ a {
 
   background-color: #81b3d2;
   border: none;
+
+  cursor: pointer;
 }
 
 .button:hover,
@@ -79,6 +81,8 @@ a {
 
   background-color: #766357;
   border: none;
+
+  cursor: pointer;
 }
 
 .button-brown:hover,
@@ -90,6 +94,16 @@ a {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #503e33;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .visually-hidden,
@@ -165,8 +179,8 @@ input[type="checkbox"]{
 }
 
 .greeting-text {
+  box-sizing: border-box;
   min-height: 216px;
-  margin-bottom: -60px;
   padding-top: 60px;
 
   background-color: white;
@@ -214,13 +228,25 @@ input[type="checkbox"]{
 .benefits {
   display: flex;
   flex-wrap: wrap;
+
+  color: white;
+
+  background-color: #81b3d2;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  background-color: #eeeeee;
 }
 
 .benefits-item {
   width: 400px;
   min-height: 256px;
-
-  background-color: #eeeeee;
 }
 
 .benefits-text {
@@ -252,15 +278,9 @@ input[type="checkbox"]{
   left: 217px;
 }
 
-.benefits-blue .benefits-text p:first-of-type:before,
-.benefits-blue .benefits-text p:first-of-type:after {
+.benefits .benefits-text p:first-of-type:before,
+.benefits .benefits-text p:first-of-type:after {
   background-color: white;
-}
-
-.benefits-blue {
-  color: white;
-
-  background-color: #81b3d2;
 }
 
 div[class^="benefits-img"] {
@@ -297,7 +317,6 @@ div[class^="benefits-img"] {
   flex-direction: column;
   align-items: center;
   min-height: 290px;
-
 
   background-color: white;
 }
@@ -506,6 +525,10 @@ div[class^="benefits-img"] {
   border: 2px solid #e5e5e5;
 }
 
+.popup-hidden {
+  display: none;
+}
+
 .appointment-map {
   min-height: 593px;
   margin: 0;
@@ -536,21 +559,27 @@ div[class^="benefits-img"] {
   justify-content: space-between;
   align-items: center;
   width: 1060px;
-  padding-top: 20px;
+  padding-top: 25px;
   margin: auto;
 }
 
 .footer-contacts {
+  box-sizing: border-box;
   width: 320px;
-}
+  padding-left: 60px;
 
-.footer-contacts p {
-  margin: 0 0 10px 50px;
 
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   text-align: left;
+  color: black;
+}
+
+.footer-contacts p {
+  margin: 0;
+
+  line-height: 40px;
 }
 
 .footer-social {
@@ -622,12 +651,7 @@ div[class^="benefits-img"] {
 
 .filters-form {
   display: flex;
-  align-items: center;
-}
-
-.filters-form .filter:nth-of-type(2) {
-  margin-left: 120px;
-  margin-right: auto;
+  align-items: flex-start;
 }
 
 .filter {
@@ -637,6 +661,11 @@ div[class^="benefits-img"] {
   text-align: left;
 
   border: none;
+}
+
+.filters-form .filter:nth-of-type(2) {
+  margin-left: 120px;
+  margin-right: auto;
 }
 
 .filter legend {
@@ -690,8 +719,7 @@ div[class^="benefits-img"] {
 }
 
 .filter-range {
-  width: 330px;
-  margin-top: -20px;
+  width: 320px;
 }
 
 .filter-range-title {
@@ -706,7 +734,7 @@ div[class^="benefits-img"] {
 .price-controls {
   position: relative;
 
-  height: 36px;
+  height: 33px;
   margin-bottom: 20px;
 
   border: 2px solid white;
@@ -729,7 +757,7 @@ div[class^="benefits-img"] {
 .price-controls label {
   display: inline-block;
 
-  line-height: 38px;
+  line-height: 35px;
   vertical-align: top;
 
   cursor: pointer;
@@ -795,9 +823,10 @@ div[class^="benefits-img"] {
 }
 
 .button-transparent {
-  padding: 6px 35px;
+  width: 133px;
+  height: 35px;
 
-  line-height: 20px;
+  line-height: 32px;
   color: inherit;
   text-transform: uppercase;
 
@@ -848,9 +877,7 @@ div[class^="benefits-img"] {
 }
 
 .sort-list p {
-  width: 70px;
-
-  text-align: left;
+  width: 80px;
 }
 
 .sort-list ul{
@@ -861,8 +888,6 @@ div[class^="benefits-img"] {
 
 .sort-item {
   margin-right: 33px;
-
-  text-align: left;
 }
 
 .sort-item button {
@@ -875,6 +900,8 @@ div[class^="benefits-img"] {
   background-color: transparent;
   border: none;
   border-bottom: 1px dotted #81b3d2;
+
+  cursor: pointer;
 }
 
 .sort-item button:hover,
@@ -894,6 +921,8 @@ div[class^="benefits-img"] {
 
   background-color: transparent;
   border: none;
+
+  cursor: pointer;
 }
 
 .control:hover path,
