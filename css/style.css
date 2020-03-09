@@ -1,5 +1,3 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
-
 body {
   margin: 0;
   padding: 0;
@@ -22,7 +20,6 @@ body {
   background-color: white;
   -webkit-box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
   box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
-
 }
 
 a {
@@ -195,7 +192,7 @@ input[type="checkbox"]{
   background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
   background-position: 0 452px, 0 -85px;
   background-repeat: no-repeat, no-repeat;
-  background-color: #9abad2;
+  background-color: #81b3d2;
 }
 
 .greeting-text {
@@ -208,11 +205,14 @@ input[type="checkbox"]{
 }
 
 .greeting-text h1 {
+  display: block;
+  width: 450px;
   padding-bottom: 30px;
-  margin: 0;
+  margin: auto;
 
   font-size: 21px;
   line-height: 26px;
+  color: black;
 }
 
 .greeting-text p {
@@ -225,6 +225,7 @@ input[type="checkbox"]{
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  align-items: baseline;
   margin: 0;
   padding: 0;
 
@@ -232,21 +233,19 @@ input[type="checkbox"]{
 }
 
 .advices-item {
+  box-sizing: border-box;
   width: 400px;
   min-height: 330px;
+  padding: 60px 50px 30px;
 
   background-color: white;
-}
-
-.advices-text {
-  margin-top: 60px;
-  margin-bottom: 30px;
 }
 
 .advices-item h3 {
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
+  color: black;
 }
 
 .benefits {
@@ -267,6 +266,7 @@ input[type="checkbox"]{
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  align-items: baseline;
   margin: 0;
   padding: 0;
 
@@ -275,42 +275,64 @@ input[type="checkbox"]{
 }
 
 .benefits-item {
+  box-sizing: border-box;
   width: 400px;
   min-height: 256px;
+  padding: 50px 69px 30px;
 }
 
-.benefits-text {
-  margin-top: 50px;
-  margin-bottom: 30px;
+.benefits .benefits-item {
+  padding: 50px 48px 30px;
 }
 
-.benefits-text p:first-of-type {
+.benefits-item h2 {
+  display: block;
+  width: 151px;
+  margin: auto;
+}
+
+.benefits-list h2 {
+  color: black;
+}
+
+.benefits-item .number{
   display: block;
   position: relative;
   margin-top: 23px;
   margin-bottom: 20px;
 }
 
-.benefits-text p:first-of-type:before,
-.benefits-text p:first-of-type:after {
+.benefits-item .number:before,
+.benefits-item .number:after {
   content: "";
   position: absolute;
-  top: 9px;
-  left: 175px;
 
   height: 1px;
-  width: 8px;
+  width: 9px;
+}
+
+.benefits .number:before,
+.benefits .number:after {
+  top: 10px;
+  left: 128px;
+
+  background-color: white;
+}
+
+.benefits .number:after {
+  left: 168px;
+}
+
+.benefits-list .number:before,
+.benefits-list .number:after {
+  top: 10px;
+  left: 106px;
 
   background-color: #333333;
 }
 
-.benefits-text p:first-of-type:after {
-  left: 217px;
-}
-
-.benefits .benefits-text p:first-of-type:before,
-.benefits .benefits-text p:first-of-type:after {
-  background-color: white;
+.benefits-list .number:after {
+  left: 147px;
 }
 
 div[class^="benefits-img"] {
@@ -358,17 +380,15 @@ div[class^="benefits-img"] {
   background-color: white;
 }
 
-.appointment-text {
-  min-height: 96px;
-  margin: auto;
+.appointment-info h2 {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 15px;
 
-  line-height: 24px;
-}
-
-.appointment-text h2 {
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
+  color: black;
 }
 
 .appointment-info .button-brown {
@@ -376,7 +396,7 @@ div[class^="benefits-img"] {
   box-sizing: border-box;
   width: 568px;
   height: 86px;
-
+  margin-top: 35px;
 
   font-size: 21px;
   line-height: 26px;
@@ -385,16 +405,16 @@ div[class^="benefits-img"] {
 /*Style for popup*/
 .popup {
   position: absolute;
-  top: 290px;
+  top: 292px;
   left: 316px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 568px;
   min-height: 395px;
 
-
   font-family: inherit;
   font-weight: bold;
+  color: black;
 
   background-color: white;
   -webkit-box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
@@ -417,6 +437,10 @@ div[class^="benefits-img"] {
   padding: 40px 55px 55px;
 }
 
+.popup-data {
+  position: relative;
+}
+
 .popup-data input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -430,34 +454,25 @@ div[class^="benefits-img"] {
   margin-right: 10px;
 }
 
-.calendar-checkin,
-.calendar-checkout {
+.popup-data button {
   position: absolute;
-  right: 65px;
+  top: 5px;
+  right: 5px;
+
+  border: none;
+  background-color: transparent;
 }
 
-.calendar-checkin {
-  top: 62px;
-}
-
-.calendar-checkout {
-  top: 127px;
-}
-
-.calendar-checkin path,
-.calendar-checkout path {
+.popup-data path {
   fill: #cacaca;
 }
 
-.calendar-checkin:hover path,
-.calendar-checkin:focus path,
-.calendar-checkout:hover path,
-.calendar-checkout:focus path {
+.popup-data:hover path,
+.popup-data:focus path {
   fill: #231f20;
 }
 
-.calendar-checkin:active path,
-.calendar-checkout:active path {
+.popup-data:active path{
   fill: #81b3d2;
 }
 
@@ -465,9 +480,6 @@ div[class^="benefits-img"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -483,8 +495,16 @@ div[class^="benefits-img"] {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 230px;
+  width: 220px;
   margin-top: 15px;
+}
+
+.popup-container .popup-person:first-of-type {
+  margin-right: 15px;
+}
+
+.popup-person label {
+  margin-right: 30px;
 }
 
 .popup-person input {
@@ -559,21 +579,9 @@ div[class^="benefits-img"] {
   background-color: #81b3d2;
 }
 
-.popup-person label {
-  margin-right: 40px;
-}
-
-.popup-button {
-  width: 458px;
-  height: 58px;
-  margin-top: 40px;
-
-  font-size: 21px;
-  line-height: 26px;
-}
-
 .popup-form input {
   font: inherit;
+  text-transform: uppercase;
 
   border: none;
   background-color: #f2f2f2;
@@ -586,6 +594,15 @@ div[class^="benefits-img"] {
 .popup-form input:focus {
   background-color: white;
   border: 2px solid #e5e5e5;
+}
+
+.popup-button {
+  width: 458px;
+  height: 58px;
+  margin-top: 40px;
+
+  font-size: 21px;
+  line-height: 26px;
 }
 
 .popup-hidden {
@@ -653,11 +670,6 @@ div[class^="benefits-img"] {
 }
 
 .footer-social {
-  width: 320px;
-  margin: auto;
-}
-
-.footer-social ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -703,6 +715,8 @@ div[class^="benefits-img"] {
   -ms-flex-align: center;
   align-items: center;
   margin-left: 90px;
+
+  color: black;
 }
 
 .footer-copyright:hover path,
