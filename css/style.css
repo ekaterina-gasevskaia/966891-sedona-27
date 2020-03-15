@@ -107,7 +107,7 @@ input[type="number"] {
 }
 
 .visually-hidden,
-input[type="checkbox"]{
+input[type="checkbox"] {
   position: absolute;
 
   width: 1px;
@@ -176,6 +176,7 @@ input[type="checkbox"]{
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+
   background-color: #81b3d2;
 }
 
@@ -222,12 +223,15 @@ input[type="checkbox"]{
   margin: 0;
 }
 
-.advices-list {
+.advices-list,
+.benefits-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
   align-items: baseline;
   margin: 0;
   padding: 0;
@@ -236,6 +240,7 @@ input[type="checkbox"]{
 }
 
 .advices-item {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 400px;
   min-height: 330px;
@@ -266,21 +271,8 @@ input[type="checkbox"]{
   background-color: #81b3d2;
 }
 
-.benefits-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  align-items: baseline;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-  background-color: #eeeeee;
-}
-
 .benefits-item {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 400px;
   min-height: 256px;
@@ -289,6 +281,10 @@ input[type="checkbox"]{
 
 .benefits .benefits-item {
   padding: 47px 48px 30px;
+}
+
+.benefits-list .benefits-item {
+  background-color: #eeeeee;
 }
 
 .benefits-list .benefits-item:nth-of-type(3) {
@@ -306,7 +302,7 @@ input[type="checkbox"]{
   color: black;
 }
 
-.benefits-item .number{
+.benefits-item .number {
   display: block;
   position: relative;
   margin-top: 24px;
@@ -382,6 +378,7 @@ div[class^="benefits-img"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -486,12 +483,11 @@ div[class^="benefits-img"] {
   border: none;
   background-color: transparent;
 
-  outline: none;
+  cursor: pointer;
 }
 
 .popup-data path {
   fill: #cacaca;
-
 }
 
 .popup-data:hover path,
@@ -555,6 +551,8 @@ div[class^="benefits-img"] {
 
   border: none;
   background-color: #f2f2f2;
+
+  cursor: pointer;
 }
 
 .button-left::before {
@@ -851,6 +849,11 @@ div[class^="benefits-img"] {
   opacity: 0.3;
 }
 
+.filter-input:focus + label {
+  border-bottom: 2px solid white;
+}
+
+
 .filter-range {
   width: 318px;
   margin-right: 1px;
@@ -898,6 +901,7 @@ div[class^="benefits-img"] {
 
 .price-controls .min-price,
 .price-controls .max-price {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 150px;
   padding-left: 40px;
@@ -1000,6 +1004,8 @@ div[class^="benefits-img"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
   align-items: baseline;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1037,6 +1043,7 @@ div[class^="benefits-img"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 700px;
   padding: 0;
@@ -1141,6 +1148,7 @@ div[class^="benefits-img"] {
 }
 
 .housing-item-info {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 260px;
   min-height: 100px;
