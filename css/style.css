@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 body {
   margin: 0;
   padding: 0;
@@ -824,10 +826,10 @@ div[class^="benefits-img"] {
 .filter-input + label:before {
   content: "";
   position: absolute;
-  right: 113px;
+  right: 109px;
 
-  width: 23px;
-  height: 23px;
+  width: 27px;
+  height: 27px;
 
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
@@ -839,7 +841,7 @@ div[class^="benefits-img"] {
   right: 109px;
 
   width: 27px;
-  height: 23px;
+  height: 27px;
 
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
@@ -904,6 +906,7 @@ div[class^="benefits-img"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 150px;
+  height: 34px;
   padding-left: 40px;
 }
 
@@ -912,6 +915,8 @@ div[class^="benefits-img"] {
 }
 
 .price-controls input {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   width: 50px;
   height: 34px;
   margin: 0;
